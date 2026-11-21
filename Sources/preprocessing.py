@@ -172,7 +172,7 @@ def load_and_preprocess_data(data_dir=None):
     invalid_owners = (
         (df["owners_min"] < 0) | (df["owners_max"] < df["owners_min"])
     )
-
+    
     df.loc[invalid_owners, "owners_estimate"] = float("nan")
 
     print(f"After cleaning: {len(df):,} games")
