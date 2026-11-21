@@ -1,9 +1,13 @@
+from pathlib import Path
+
 import pandas as pd
-steam_data = pd.read_csv("data/steam_app_data.csv", nrows=5)
+
+data_file = Path(__file__).resolve().parent.parent / "data" / "steam_app_data.csv"
+steam_data = pd.read_csv(data_file, nrows=5)
 print(steam_data.columns.tolist())
 
 steam_data = pd.read_csv(
-    "data/steam_app_data.csv",
+    data_file,
     usecols=["steam_appid", "genres", "categories"]
 )
 
@@ -24,7 +28,7 @@ print(
 )
 
 metadata = pd.read_csv(
-    "data/steam_app_data.csv",
+    data_file,
     usecols=["steam_appid", "genres"]
 )
 

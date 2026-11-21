@@ -149,7 +149,7 @@ def run(df):
     plt.colorbar(label="Cluster")
     plt.tight_layout()
 
-    results_dir = Path(__file__).resolve().parent / "results"
+    results_dir = Path(__file__).resolve().parent.parent / "results"
     results_dir.mkdir(parents=True, exist_ok=True)
     plt.savefig(results_dir / "kmeans_clusters.png", dpi=300)
     plt.show()

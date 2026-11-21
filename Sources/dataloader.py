@@ -1,7 +1,7 @@
 from pathlib import Path
 import kagglehub
 
-data_dir = Path("data")
+data_dir = Path(__file__).resolve().parent.parent / "data"
 data_dir.mkdir(parents=True, exist_ok=True)
 
 # Download and extract the dataset's CSV files into data/.

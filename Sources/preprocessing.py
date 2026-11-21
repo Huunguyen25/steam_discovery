@@ -59,9 +59,12 @@ def first_non_null(values):
     return values.iloc[0] if not values.empty else pd.NA
 
 
-def load_and_preprocess_data(data_dir="data"):
+def load_and_preprocess_data(data_dir=None):
     """Load game data, combine Steam metadata, and clean analysis features."""
-    data_dir = Path(data_dir)
+    data_dir = (
+        Path(data_dir) if data_dir is not None
+        else Path(__file__).resolve().parent.parent / "data"
+    )
     csv_file = data_dir / "all_data.csv"
 
     if not csv_file.is_file():

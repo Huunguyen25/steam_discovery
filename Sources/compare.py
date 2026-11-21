@@ -20,7 +20,7 @@ def summarize_results(name, games):
 
 def run_comparison(df):
 
-    results_dir = Path("results")
+    results_dir = Path(__file__).resolve().parent.parent / "results"
     results_dir.mkdir(exist_ok=True)
 
     # ----------------------------------

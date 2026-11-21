@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Project directories
-results_dir = Path("results")
+results_dir = Path(__file__).resolve().parent.parent / "results"
 figures_dir = results_dir / "figures"
 figures_dir.mkdir(parents=True, exist_ok=True)
 
