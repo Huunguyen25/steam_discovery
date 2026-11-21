@@ -1,0 +1,3 @@
+method,game_count,avg_positive_rate,median_reviews,median_owners
+Basic Filtering,14,93.75875098445492,3632.0,35000.0
+Custom Scoring,14,99.41174411152922,280.0,10000.0
