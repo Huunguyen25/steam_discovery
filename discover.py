@@ -3,7 +3,7 @@ from preprocessing import load_and_preprocess_data
 def run(df):
     # Baseline filtering parameters
     min_reviews = 2900
-    min_rating = 85
+    min_rating = 80
     max_owners = 50000
 
     # Apply filtering
